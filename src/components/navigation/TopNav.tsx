@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import simplamoMark from '../../assets/simplamo-mark.svg'
-import { sidebarSections, workbookLinks, type PageId, type SectionId } from '../../utils/navigation'
+import { finalLinks, sidebarSections, workbookLinks, type PageId, type SectionId } from '../../utils/navigation'
 
 const masscomLogoUrl = 'https://masscom.vn/public/upload/Logo%2BSlogan1.png'
 
@@ -99,6 +99,20 @@ export function TopNav({
             >
               <span className="sb-dot"></span>
               {label}
+            </button>
+          ))}
+        </div>
+        <div className="mobile-nav-section">
+          <div className="mobile-nav-label">Cuối chương trình</div>
+          {finalLinks.map((item) => (
+            <button
+              className={`mobile-nav-link${activePage === item.page ? ' active' : ''}`}
+              key={item.page}
+              type="button"
+              onClick={() => handlePageChange(item.page)}
+            >
+              <span className="sb-dot"></span>
+              {item.label}
             </button>
           ))}
         </div>

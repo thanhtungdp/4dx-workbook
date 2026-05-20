@@ -1,4 +1,4 @@
-import { sidebarSections, workbookLinks, type PageId } from '../../utils/navigation'
+import { finalLinks, sidebarSections, workbookLinks, type PageId } from '../../utils/navigation'
 
 type SidebarProps = {
   activePage: PageId
@@ -47,6 +47,20 @@ export function Sidebar({
           >
             <span className="sb-dot"></span>
             {label}
+          </button>
+        ))}
+      </div>
+      <div className="sb-section">
+        <div className="sb-label">Cuối chương trình</div>
+        {finalLinks.map((item) => (
+          <button
+            className={`sb-link${activePage === item.page ? ' active' : ''}`}
+            key={item.page}
+            type="button"
+            onClick={() => onPageChange(item.page)}
+          >
+            <span className="sb-dot"></span>
+            {item.label}
           </button>
         ))}
       </div>

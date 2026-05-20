@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react'
 import { useState } from 'react'
+import { FourDxExamplesDashboard } from '../components/content/FourDxExamplesDashboard'
 import { LegacyMain } from '../components/content/LegacyMain'
-import { PrincipleExamples } from '../components/content/PrincipleExamples'
 import { PageControls } from '../components/navigation/PageControls'
 import { Sidebar } from '../components/navigation/Sidebar'
 import { TopNav } from '../components/navigation/TopNav'
@@ -92,7 +92,7 @@ export function TrainingApp() {
         onWorkbookChange={actions.showWorkbook}
       />
       <LegacyMain>
-        <PrincipleExamples activePage={activePage} />
+        <FourDxExamplesDashboard activePage={activePage} />
         <PageControls
           currentLabel={currentSlide.label}
           next={nextSlide}

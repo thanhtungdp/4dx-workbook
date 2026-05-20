@@ -47,7 +47,6 @@ export const sidebarSections = [
       { page: 'overview', label: '4DX là gì?' },
       { page: 'sbu-wigs', label: 'WIG của Masscom' },
       { page: 'schedule', label: 'Lịch trình 2 ngày' },
-      { page: 'examples', label: 'Example 4DX' },
     ],
   },
   {
@@ -81,6 +80,11 @@ export const workbookLinks = [
   'Tờ 4: Bảng điểm',
 ] as const
 
+export const finalLinks = [{ page: 'examples', label: 'Example 4DX' }] as const satisfies ReadonlyArray<{
+  page: PageId
+  label: string
+}>
+
 export type SlideRoute = {
   label: string
   page: PageId
@@ -90,6 +94,7 @@ export type SlideRoute = {
 export const slideRoutes: SlideRoute[] = [
   ...sidebarSections.flatMap((section) => section.items.map((item) => ({ label: item.label, page: item.page }))),
   ...workbookLinks.map((label, index) => ({ label, page: 'workbook' as const, workbookTab: index })),
+  ...finalLinks.map((item) => ({ label: item.label, page: item.page })),
 ]
 
 export function getSlideIndex(page: PageId, workbookTab: number) {
