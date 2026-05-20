@@ -1,5 +1,6 @@
 import { useCallback, useEffect } from 'react'
 import { useState } from 'react'
+import { CadenceL10Meeting } from '../components/content/CadenceL10Meeting'
 import { FourDxExamplesDashboard } from '../components/content/FourDxExamplesDashboard'
 import { LegacyMain } from '../components/content/LegacyMain'
 import { PageControls } from '../components/navigation/PageControls'
@@ -92,6 +93,7 @@ export function TrainingApp() {
         onWorkbookChange={actions.showWorkbook}
       />
       <LegacyMain>
+        <CadenceL10Meeting activePage={activePage} />
         <FourDxExamplesDashboard activePage={activePage} />
         <PageControls
           currentLabel={currentSlide.label}

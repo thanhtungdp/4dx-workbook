@@ -50,7 +50,7 @@ const radioPrefix = 'radio_'
 const eosPhaseSeconds = [300, 300, 300] as const
 
 function applyPageClasses(page: PageId) {
-  document.querySelectorAll('.page').forEach((element) => element.classList.remove('active'))
+  document.querySelectorAll('.legacy-pages .page').forEach((element) => element.classList.remove('active'))
   document.getElementById(`page-${page}`)?.classList.add('active')
 }
 

@@ -63,7 +63,7 @@ export const sidebarSections = [
     label: 'Ngày 2 — 22/5',
     items: [
       { page: 'scoreboard', label: 'Nguyên tắc 3: Bảng điểm' },
-      { page: 'cadence', label: 'Nguyên tắc 4: Nhịp họp WIG' },
+      { page: 'cadence', label: 'Nguyên tắc 4: Nhịp điệu trách nhiệm' },
       { page: 'checkin', label: 'Check-in kết quả' },
       { page: 'simplamo', label: 'Triển khai Simplamo' },
     ],
