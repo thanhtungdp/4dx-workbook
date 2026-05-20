@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { CadenceL10Meeting } from '../components/content/CadenceL10Meeting'
 import { FourDxExamplesDashboard } from '../components/content/FourDxExamplesDashboard'
 import { LegacyMain } from '../components/content/LegacyMain'
+import { WorkbookOnePagePreview } from '../components/content/WorkbookOnePagePreview'
 import { PageControls } from '../components/navigation/PageControls'
 import { Sidebar } from '../components/navigation/Sidebar'
 import { TopNav } from '../components/navigation/TopNav'
@@ -94,6 +95,7 @@ export function TrainingApp() {
       />
       <LegacyMain>
         <CadenceL10Meeting activePage={activePage} />
+        <WorkbookOnePagePreview activePage={activePage} />
         <FourDxExamplesDashboard activePage={activePage} />
         <PageControls
           currentLabel={currentSlide.label}

@@ -17,8 +17,10 @@ export function readWorkbook(): WorkbookData | null {
 
 export function writeWorkbook(data: WorkbookData) {
   localStorage.setItem(WORKBOOK_STORAGE_KEY, JSON.stringify(data))
+  window.dispatchEvent(new CustomEvent('workbook:updated'))
 }
 
 export function clearWorkbook() {
   localStorage.removeItem(WORKBOOK_STORAGE_KEY)
+  window.dispatchEvent(new CustomEvent('workbook:updated'))
 }

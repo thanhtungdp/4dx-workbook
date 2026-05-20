@@ -101,6 +101,16 @@ export function TopNav({
               {label}
             </button>
           ))}
+          <button
+            className={`mobile-nav-link${activePage === 'workbook-preview' ? ' active' : ''}${
+              completedSheets >= 4 ? ' done' : ''
+            }`}
+            type="button"
+            onClick={() => handlePageChange('workbook-preview')}
+          >
+            <span className="sb-dot"></span>
+            Preview 1 trang
+          </button>
         </div>
         <div className="mobile-nav-section">
           <div className="mobile-nav-label">Cuối chương trình</div>

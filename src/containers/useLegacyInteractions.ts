@@ -253,6 +253,7 @@ export function useLegacyInteractions({
 
   const showPage = useCallback(
     (page: PageId) => {
+      if (page === 'workbook-preview') saveAll(true)
       setActivePage(page)
       setActiveSection(getSectionForPage(page))
       applyPageClasses(page)
@@ -260,7 +261,7 @@ export function useLegacyInteractions({
       if (page === 'sbu-wigs') setTimeout(animateStatCards, 150)
       if (page === 'scoreboard') setTimeout(animateLiveScoreboard, 150)
     },
-    [setActivePage, setActiveSection],
+    [saveAll, setActivePage, setActiveSection],
   )
 
   const showSection = useCallback(

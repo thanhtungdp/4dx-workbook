@@ -13,6 +13,7 @@ export type PageId =
   | 'checkin'
   | 'simplamo'
   | 'workbook'
+  | 'workbook-preview'
 
 export type SectionId = 'overview' | 'day1' | 'day2' | 'workbook'
 
@@ -36,7 +37,7 @@ const day2Pages = new Set<PageId>(['scoreboard', 'cadence', 'checkin', 'simplamo
 export function getSectionForPage(page: PageId): SectionId {
   if (day1Pages.has(page)) return 'day1'
   if (day2Pages.has(page)) return 'day2'
-  if (page === 'workbook') return 'workbook'
+  if (page === 'workbook' || page === 'workbook-preview') return 'workbook'
   return 'overview'
 }
 
@@ -94,6 +95,7 @@ export type SlideRoute = {
 export const slideRoutes: SlideRoute[] = [
   ...sidebarSections.flatMap((section) => section.items.map((item) => ({ label: item.label, page: item.page }))),
   ...workbookLinks.map((label, index) => ({ label, page: 'workbook' as const, workbookTab: index })),
+  { label: 'Preview 1 trang', page: 'workbook-preview' as const },
   ...finalLinks.map((item) => ({ label: item.label, page: item.page })),
 ]
 

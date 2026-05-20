@@ -49,6 +49,16 @@ export function Sidebar({
             {label}
           </button>
         ))}
+        <button
+          className={`sb-link${activePage === 'workbook-preview' ? ' active' : ''}${
+            completedSheets >= 4 ? ' done' : ''
+          }`}
+          type="button"
+          onClick={() => onPageChange('workbook-preview')}
+        >
+          <span className="sb-dot"></span>
+          Preview 1 trang
+        </button>
       </div>
       <div className="sb-section">
         <div className="sb-label">Cuối chương trình</div>
