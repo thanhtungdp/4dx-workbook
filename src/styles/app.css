@@ -753,4 +753,77 @@ textarea.field-input{min-height:108px;line-height:1.75}
     width:86px;
     height:86px;
   }
+  .stat-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+    margin:24px 0;
+  }
+  .stat-card{
+    padding:20px 18px 18px;
+  }
+  .stat-sbu{
+    line-height:1.35;
+    margin-bottom:14px;
+  }
+  .stat-row{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    gap:8px;
+    align-items:center;
+  }
+  .stat-x,
+  .stat-y{
+    min-width:0;
+    line-height:1.15;
+    overflow-wrap:anywhere;
+  }
+  .stat-x{
+    font-size:18px;
+  }
+  .stat-y{
+    font-size:25px;
+  }
+  .stat-arrow{
+    align-self:center;
+    line-height:1;
+  }
+  .stat-meta,
+  .stat-deadline{
+    line-height:1.45;
+  }
+  .stat-pct{
+    position:static;
+    display:block;
+    margin-top:8px;
+    line-height:1.35;
+  }
+  .stat-bar-track{
+    height:auto;
+    min-height:6px;
+    overflow:visible;
+  }
+  .stat-bar-fill{
+    height:6px;
+  }
+}
+
+@media(max-width:430px){
+  .stat-card{
+    padding:18px 16px 16px;
+  }
+  .stat-row{
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+  .stat-arrow{
+    transform:rotate(90deg);
+    justify-self:start;
+    margin:2px 0;
+  }
+  .stat-x{
+    font-size:17px;
+  }
+  .stat-y{
+    font-size:27px;
+  }
 }
