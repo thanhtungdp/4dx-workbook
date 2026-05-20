@@ -31,6 +31,10 @@ type FourDxExample = {
   detail: string
 }
 
+type DonutStyle = CSSProperties & {
+  '--pct': string
+}
+
 const fourDxExamples: FourDxExample[] = [
   {
     number: 1,
@@ -169,7 +173,7 @@ export function FourDxExamplesDashboard({ activePage }: FourDxExamplesDashboardP
               <div className="fourdx-kpi-panel">
                 <div className="fourdx-label">Tỷ lệ / trạng thái</div>
                 <div className="fourdx-kpi-number">{example.achievement}</div>
-                <div className="fourdx-donut" style={{ '--pct': example.achievement } as CSSProperties}>
+                <div className="fourdx-donut" style={{ '--pct': example.achievement } as DonutStyle}>
                   <span>{example.achievement}</span>
                 </div>
                 <p>{example.status}</p>
