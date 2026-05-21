@@ -87,43 +87,53 @@ const whirlwindCases: WhirlwindCase[] = [
 const wigSuggestions: WigSuggestion[] = [
   {
     sbu: 'SBU1 · Kinh doanh',
-    focus: 'Giảm nhiễu nhóm chat, tăng hiệu suất xử lý đơn chuẩn',
-    from: 'xử lý phát sinh thủ công',
-    to: '90% yêu cầu đi đúng kênh/SLA',
+    focus: 'Thiết kế cơ chế giao tiếp và làm việc trong các tuần đầu',
+    from: 'chat phân tán, xử lý theo phản xạ',
+    to: '90% việc đi đúng kênh/SLA',
     deadline: '30/06/2026',
-    wig: 'Tăng tỷ lệ yêu cầu kinh doanh được xử lý đúng kênh và đúng SLA từ tình trạng xử lý phát sinh thủ công lên 90% trước 30/06/2026.',
-    lead1: 'Mỗi ngày triage nhóm chat 2 khung giờ cố định, phân loại việc vào hệ thống trong ngày.',
-    lead2: 'Mỗi tuần đóng gói 5 tình huống lặp lại thành mẫu phản hồi/quy trình xử lý.',
+    wig: 'Tăng tỷ lệ việc kinh doanh được tiếp nhận và xử lý đúng kênh/SLA từ trạng thái chat phân tán lên 90% trước 30/06/2026.',
+    lead1: 'Thiết kế và chạy cơ chế phản hồi nhóm chat theo 2-3 khung giờ cố định mỗi ngày.',
+    lead2: 'Mỗi tuần chuẩn hóa 5 tình huống giao tiếp lặp lại thành mẫu phản hồi, quy định kênh và người chịu trách nhiệm.',
   },
   {
-    sbu: 'SBU1 · PT sản phẩm',
-    focus: 'Chuẩn hóa luồng thông tin hàng hóa và hỗ trợ bán hàng',
+    sbu: 'SBU1 · Kinh doanh PTSP',
+    focus: 'Thống nhất thông tin hàng hóa, kế hoạch và quy trình nội bộ',
     from: 'thông tin phân tán',
-    to: '100% thông tin hàng/kế hoạch có nguồn chung',
+    to: '100% thông tin có nguồn chung',
     deadline: '15/07/2026',
-    wig: 'Tăng mức độ sẵn sàng thông tin hàng hóa, kế hoạch và hỗ trợ bán hàng từ phân tán lên 100% có nguồn chung trước 15/07/2026.',
-    lead1: 'Cập nhật lịch hàng về, trạng thái lỗi và kế hoạch bán hàng vào một nguồn chung mỗi ngày.',
-    lead2: 'Mỗi tuần rà 3 quy trình đang lệch thực tế, fix rồi đưa lên hệ thống.',
+    wig: 'Tăng tỷ lệ thông tin hàng hóa, kế hoạch bán hàng và hướng xử lý nội bộ có nguồn chung từ phân tán lên 100% trước 15/07/2026.',
+    lead1: 'Build một nguồn chung cho hàng hóa, thông tin, kế hoạch và thông báo nội bộ; cập nhật trạng thái mỗi ngày.',
+    lead2: 'Mỗi tuần rà các quy trình đang dùng: quy trình còn đúng thì đưa lên hệ thống, quy trình lệch thì fix trước khi ban hành.',
+  },
+  {
+    sbu: 'Khối vận hành',
+    focus: 'Đóng gói sự vụ ngoài quy trình thành cách xử lý chuẩn',
+    from: 'xử lý sự vụ thủ công',
+    to: '80% sự vụ có mẫu xử lý',
+    deadline: '31/07/2026',
+    wig: 'Tăng tỷ lệ sự vụ phát sinh ngoài quy trình có mẫu xử lý chuẩn từ xử lý thủ công lên 80% trước 31/07/2026.',
+    lead1: 'Mỗi tuần gom và phân loại các sự vụ ngoài quy trình theo nhóm nguyên nhân, phòng ban và mức độ lặp lại.',
+    lead2: 'Mỗi tuần đóng gói/cập nhật tối thiểu 3 mẫu xử lý để đưa vào quy trình ban hành.',
   },
   {
     sbu: 'SBU2 · Nexta',
-    focus: 'Giảm câu hỏi lặp lại, tăng tốc phản hồi sự cố',
-    from: '0 thư viện Q&A chuẩn',
-    to: '80% lỗi sale/CSKH có câu trả lời chuẩn',
+    focus: 'Xây bot Q&A và roadmap để CSKH trả lời nhanh',
+    from: 'lỗi hỏi đi hỏi lại',
+    to: '80% câu hỏi có câu trả lời chuẩn',
     deadline: '31/07/2026',
-    wig: 'Tăng tỷ lệ lỗi sale/CSKH có câu trả lời chuẩn từ chưa có thư viện Q&A lên 80% trước 31/07/2026.',
-    lead1: 'Mỗi tuần đóng gói 10 lỗi/câu hỏi lặp lại vào thư viện Q&A.',
-    lead2: 'Cập nhật roadmap ngắn hạn/dài hạn 2 lần/tuần để CSKH trả lời ngay.',
+    wig: 'Tăng tỷ lệ lỗi và câu hỏi lặp lại của sale/CSKH có câu trả lời chuẩn từ xử lý từng vụ lên 80% trước 31/07/2026.',
+    lead1: 'Mỗi tuần đóng gói 10 lỗi/câu hỏi lặp lại vào thư viện Q&A để huấn luyện bot trả lời nhanh.',
+    lead2: 'Cập nhật roadmap ngắn hạn/dài hạn 2 lần/tuần để CSKH biết vấn đề nào đang xử lý, khi nào có câu trả lời.',
   },
   {
     sbu: 'SBU3 · Massko',
-    focus: 'Giảm phụ thuộc chuyên môn vào leader',
-    from: 'leader phải nhảy vào nhiều việc',
-    to: '70% việc chuyên môn có guide tự xử lý',
+    focus: 'Dùng 4DX và guide AI để giảm phụ thuộc vào leader',
+    from: 'leader phải nhảy vào từng việc',
+    to: '70% việc có guide/nhịp xử lý',
     deadline: '31/07/2026',
-    wig: 'Tăng tỷ lệ việc chuyên môn có guide để team tự xử lý từ phụ thuộc leader lên 70% trước 31/07/2026.',
-    lead1: 'Mỗi tuần tạo 3 guide R&D/AI cho các câu hỏi chuyên môn lặp lại.',
-    lead2: 'Duy trì daily 15 phút và họp 4DX tuần để khóa cam kết, không kéo dài họp phát sinh.',
+    wig: 'Tăng tỷ lệ việc chuyên môn có guide hoặc nhịp xử lý rõ từ phụ thuộc leader lên 70% trước 31/07/2026.',
+    lead1: 'Mỗi tuần tạo 3 guide R&D với AI cho câu hỏi chuyên môn lặp lại để giúp team từng bước trở thành lead.',
+    lead2: 'Duy trì hệ thống 4DX để giao việc, daily meeting và họp đều, giảm họp kéo dài hoặc nhảy vào từng sự vụ.',
   },
 ]
 
@@ -194,8 +204,8 @@ export function PostTrainingInsights({ activePage }: PostTrainingInsightsProps) 
             <strong>chọn trận đáng thắng</strong>
           </h1>
           <p className="page-subtitle">
-            Từ cơn lốc sau đào tạo, mỗi SBU có thể chọn 1 WIG vận hành đủ hẹp, đo được và tạo khác biệt thật trong 4-8
-            tuần đầu.
+            Từ phần “làm điều gì khác đi” sau đào tạo, mỗi đội có thể biến một điểm nghẽn vận hành thành WIG đủ hẹp,
+            đo được và tạo khác biệt thật trong các tuần đầu.
           </p>
 
           <div className="wig-suggestion-grid">
