@@ -46,7 +46,7 @@ export const sidebarSections = [
     label: 'Tổng quan',
     items: [
       { page: 'overview', label: '4DX là gì?' },
-      { page: 'sbu-wigs', label: 'WIG của Masscom' },
+      { page: 'sbu-wigs', label: 'Mục tiêu tài chính' },
       { page: 'schedule', label: 'Lịch trình 2 ngày' },
     ],
   },
